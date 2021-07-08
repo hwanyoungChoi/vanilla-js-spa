@@ -1,3 +1,5 @@
+import { replaceRoute } from "../router";
+
 const template = `
   <h1>About</h1>
   <button>go home page</button>
@@ -18,6 +20,12 @@ export default class About extends HTMLElement {
   connectedCallback() {
     this.titleEl = document.querySelector('h1');
     this.buttonEl = document.querySelector('button');
+
+    this.buttonEl.addEventListener('click', this.handleButtonClicked);
+  }
+
+  handleButtonClicked() {
+    replaceRoute('/');
   }
   
 }
