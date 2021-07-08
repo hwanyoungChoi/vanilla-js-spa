@@ -1,2 +1,4 @@
+import Home from "./pages/Home";
+
 const appDiv = document.getElementById('app');
-appDiv.innerHTML = 'Example';
+appDiv.appendChild(new Home());
